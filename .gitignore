@@ -1,0 +1,22 @@
+# Default ignored files
+*.vscode
+*.idea
+*.h5
+*.png
+*.avi
+*.svg
+*.npy
+*.exr
+*.v2
+*.csv
+*.ply
+*.DS_Store
+**/.VSCodeCounter/**
+**/net_state/**
+!**/net_state/NLoSNet_best.txt
+!**/net_state/NLoSNet_best.pt
+**/results/**
+**/tensorboard_logs/**
+**/datasets/**
+**/point_clouds/**
+**/__pycache__/**
