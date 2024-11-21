@@ -77,7 +77,7 @@
 		</transform>
 
         <texture type="bitmap" name="irradiance">
-            <string name="filename" value="../../textures/bitmap.png"/>
+            <string name="filename" value="../../textures/emitter_pattern.png"/>
         </texture>
 		
 		<float name="scale" value="$scl"/>

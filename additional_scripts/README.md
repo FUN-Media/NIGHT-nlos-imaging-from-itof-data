@@ -94,7 +94,14 @@ In order to generate the standard dataset it is required to follow the following
    * open the `Blender 2.8` project and load the `object_generator_rnd.py` script to generate all the random object starting from the basic one following the `tr_rot_list` generated in the previous step (if needed change the path in the script inside `Blender`)
    * after all the object has been generated, using the `mitsuba2-blender-add-on` (located in the [blender add-on](../tools/example_files/standard_dataset_sample_files/blender_addon) folder) export all the object in the mitsuba2 format
    * move the `mesh` folder just generated to the same folder where the `out` folder of point (1) is located
-3. in the same folder where are located the `mesh` and `out` folder copy the folder [textures](../tools/example_files/standard_dataset_sample_files/textures), in case the texture could be generated again using the `multi_tools.py` script
+3. in the same folder where are located the `mesh` and `out` folder copy the folder [textures](../tools/example_files/standard_dataset_sample_files/textures); it is possible to generate the "texture" using the [multi_tools.py](./multi_tools.py) script as follow:
+      ```bash
+      multi_tools.py -t spot_bitmap -m <img_resolution> -s <img_resolution> -o <output_folder>
+      ```
+      example:
+      ```bash
+      multi_tools.py -t spot_bitmap -m "320,240" -s "320,240" -o ./textures/
+      ```
 4. in the same folder where are located the `mesh` and `out` folder copy the folder [slurm_data](../tools/example_files/standard_dataset_sample_files/slurm_data) and the file [launch_slurm.sh](../tools/example_files/standard_dataset_sample_files/launch_slurm.sh)
 5. run the script [`slurm_files_gen.py`](../tools/example_files/standard_dataset_sample_files/slurm_data/template/slurm_files_gen.py)
 6. run the script [`launch_slurm.sh`](../tools/example_files/standard_dataset_sample_files/launch_slurm.sh) to generate the dataset using SLURM
@@ -118,7 +125,14 @@ In order to generate the Fermat dataset it is required to follow the following s
    * open the `Blender 2.8` project and load the `object_generator_rnd.py` script to generate all the random object starting from the basic one following the `tr_rot_list` generated in the previous step (if needed change the path in the script inside `Blender`)
    * after all the object has been generated, using the `mitsuba2-blender-add-on` (located in the [blender add-on](../tools/example_files/standard_dataset_sample_files/blender_addon) folder) export all the object in the mitsuba2 format
    * move the `mesh` folder just generated to the same folder where the `out` folder of point (1) is located
-3. in the same folder where are located the `mesh` and `out` folder copy the folder [textures](../tools/example_files/fermat_data_samples_files/textures), in case the texture could be generated again using the `test.py` script setting the flag to split the grid to True
+3. in the same folder where are located the `mesh` and `out` folder copy the folder [textures](../tools/example_files/fermat_data_samples_files/textures); it is possible to generate the "texture" using the [multi_tools.py](./multi_tools.py) script as follow:
+      ```bash
+      multi_tools.py -t spot_bitmap -m <img_resolution> -s <img_resolution> -o <output_folder>
+      ```
+      example:
+      ```bash
+      multi_tools.py -t spot_bitmap -m "320,240" -s "32,24" -o ./textures/
+      ```
 4. in the same folder where are located the `mesh` and `out` folder copy the folder [slurm_data](../tools/example_files/standard_dataset_sample_files/slurm_data) and the file [launch_slurm.sh](../tools/example_files/standard_dataset_sample_files/launch_slurm.sh)
 5. run the script [`slurm_files_gen.py`](../tools/example_files/standard_dataset_sample_files/slurm_data/template/slurm_files_gen.py)
 6. run the script [`launch_slurm.sh`](../tools/example_files/standard_dataset_sample_files/launch_slurm.sh) to generate the dataset using SLURM
@@ -140,7 +154,7 @@ In order to generate the *mirror trick* ground truth it is required to follow th
       * now load the `mirror.py`, select all the just generated object and run the script, it will generate all the flipped version of the object
       * after all the object has been generated, using the `mitsuba2-blender-add-on` (located in the [blender add-on](../tools/example_files/standard_dataset_sample_files/blender_addon) folder) export all the object in the mitsuba2 format except from the walls
       * move the `mesh` folder just generated to the same folder where the `out` folder of point (1) is located
-   2. in the same folder where are located the `mesh` and `out` folder copy the folder textures, that could be generated using the [multi_tools.py](./multi_tools.py) script as follow:
+   2. in the same folder where are located the `mesh` and `out` folder copy the folder [textures](../tools/example_files/gt_mirror_sample_files/textures); it is possible to generate the "texture" using the [multi_tools.py](./multi_tools.py) script as follow:
       ```bash
       multi_tools.py -t spot_bitmap -m <img_resolution> -s <img_resolution> -o <output_folder>
       ```

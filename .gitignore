@@ -3,6 +3,7 @@
 *.idea
 *.h5
 *.png
+!**/emitter_pattern.png
 *.avi
 *.svg
 *.npy
